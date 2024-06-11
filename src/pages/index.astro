@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="list-box">
+      <ul class="list">
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+      </ul>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .list-box {
+    height: 200px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .list li {
+    flex: 1;
+  }
+
+  .list li div {
+    display: block;
+    background: #161616;
+    min-height: 100vh;
+  }
+
+  .list:hover div {
+    transform: translate(0, 200px);
+    transition: 0.5s;
+  }
+  .list li:nth-child(1) div {
+    transition-delay: 0s;
+  }
+  .list li:nth-child(2) div {
+    transition-delay: 0.05s;
+  }
+  .list li:nth-child(3) div {
+    transition-delay: 0.1s;
+  }
+  .list li:nth-child(4) div {
+    transition-delay: 0.15s;
+  }
+  .list li:nth-child(5) div {
+    transition-delay: 0.2s;
+  }
+  .list li:nth-child(6) div {
+    transition-delay: 0.25s;
+  }
+</style>
