@@ -1,73 +1,191 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const logoSrc = "/src/assets/logo.svg";
+import ProjectCard from "../components/ProjectCard.astro";
+import ButtonText from "../components/ButtonText.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <div class="list-box">
-      <ul class="list">
-        <li><div></div></li>
-        <li><div></div></li>
-        <li><div></div></li>
-        <li><div></div></li>
-        <li><div></div></li>
-        <li><div></div></li>
-      </ul>
+<Layout title="Vaimiti DOCK | Design Portfolio">
+  <main class="size-full px-8 py-6">
+    {/* Navigation below */}
+    <nav class="flex w-full flex-row items-center">
+      <div class="flex flex-row items-center">
+        <img src={logoSrc} alt="Logo" class="pr-1.5" />
+        <p class="text-sm font-medium">VAI.D</p>
+      </div>
+
+      <menu class="flex w-full items-center justify-center space-x-8 text-sm">
+        <button class="pr-6 text-sm tracking-wider">Home</button>
+        <ButtonText link="/about/" label="About" />
+        <button class="pr-6 text-sm tracking-wider">Playground</button>
+        <button class="pr-6 text-sm tracking-wider">Photos</button>
+      </menu>
+      <p class="whitespace-nowrap text-sm">08:53 Bangkok</p>
+    </nav>
+    {/* Body below */}
+    <body>
+      {/* Hero section */}
+      <div class="border-b-2 border-dotted py-40">
+        <div class="flex flex-row items-baseline">
+          <div class="flex flex-row items-baseline pr-8">
+            <p class="pr-1 text-6xl font-medium">Hell</p>
+            <img src={logoSrc} alt="Logo" height="36" width="36" />
+          </div>
+          <div class="flex flex-row items-baseline">
+            <p class="pr-2 text-6xl font-medium">w</p>
+            <img src={logoSrc} alt="Logo" height="36" width="36" />
+            <p class="pl-1 text-6xl font-medium">rld</p>
+          </div>
+        </div>
+        <div>
+          <p class="pt-10 text-sm">
+            I'm Vai, an Independent Product Designer working from South East
+            Asia who likes to create aesthetically pleasing and functional
+            interfaces. I work across multiple disciplines from UX research,
+            product design and management, to web design and branding.<br /> - Formerly
+            at Shadow
+          </p>
+          <p class="pt-4 text-sm">
+            You can find me on Twitter, Github or you can contact me to
+            vaimiti.dock@gmail.com.
+          </p>
+        </div>
+      </div>
+      {/* Section 1 */}
+      <div class="flex flex-row items-start border-b-2 border-dotted py-40">
+        <div class="grid grid-flow-row grid-cols-10 gap-4">
+          <div class="col-span-2 col-start-1 row-span-1">
+            <div class="flex flex-row items-baseline">
+              <p class="pr-2 text-base font-medium">Selected</p>
+              <div class="flex flex-row items-baseline">
+                <p class="pr-0.5 text-base font-medium">w</p>
+                <img src={logoSrc} alt="Logo" height="10" width="10" />
+                <p class="pl-0.5 text-base font-medium">rks</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-8 col-start-3">
+            <div class="grid-col-6 grid grid-flow-row gap-4 pb-8">
+              <div class="col-span-4 col-start-1 row-span-1">
+                <ProjectCard
+                  thumbnail="/src/assets/ichiba-thumbnail.jpg"
+                  title="Ichiba Market"
+                  category="Web Design"
+                  date="2024"
+                />
+              </div>
+              <div class="col-span-2 col-start-5 row-span-2">
+                <ProjectCard
+                  thumbnail="/src/assets/onix-thumbnail.jpg"
+                  title="Onix Wallet Extension"
+                  category="UX/UI Design"
+                  date="2023"
+                />
+              </div>
+            </div>
+            <div class="grid-col-6 grid grid-flow-row gap-4">
+              <div class="col-span-2 col-start-1 row-span-2">
+                <ProjectCard
+                  thumbnail="/src/assets/shadow-wallet-thumbnail.jpg"
+                  title="Shadow Wallet Extension"
+                  category="UX/UI Design"
+                  date="2022-2023"
+                />
+              </div>
+
+              <div class="col-span-4 col-start-3 row-span-1">
+                <ProjectCard
+                  thumbnail="/src/assets/shadow-exchange-thumbnail.jpg"
+                  title="Shadow NFT Exchange"
+                  category="UX/UI Design"
+                  date="2021-2023"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Section 2 */}
+      <div
+        class="flex size-full flex-row items-start border-b-2 border-dotted py-40"
+      >
+        <div class="grid grid-flow-row grid-cols-10 gap-4">
+          <div class="col-span-2 col-start-1 row-span-1">
+            <div class="flex flex-row items-baseline">
+              <p class="pr-2 text-base font-medium">Side</p>
+              <div class="flex flex-row items-baseline">
+                <p class="pr-0.5 text-base font-medium">pr</p>
+                <img src={logoSrc} alt="Logo" height="10" width="10" />
+                <p class="text-base font-medium">jects</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-5 col-start-3 row-span-1">
+            <ProjectCard
+              thumbnail="/src/assets/boc-thumbnail.jpg"
+              title="Build onchain"
+              category="UX/UI Design"
+              date="2024"
+            />
+          </div>
+          <div class="col-span-3 col-start-8 row-span-2">
+            <ProjectCard
+              thumbnail="/src/assets/gimmy-thumbnail.jpg"
+              title="Gimmy Mobile App"
+              category="UX/UI Design"
+              date="2024"
+            />
+          </div>
+        </div>
+      </div>
+    </body>
+    {/* Section 3 */}
+    <div class="flex flex-row items-start border-b-2 border-dotted py-40">
+      {/* Left part */}
+      <div class="grid grid-flow-row grid-cols-10 gap-4">
+        <div class="col-span-2 col-start-1 row-span-1">
+          <div class="flex size-5/12 flex-row items-baseline">
+            <p class="pr-2 text-base font-medium">Site</p>
+            <div class="flex flex-row items-baseline">
+              <p class="pr-0.5 text-base font-medium">inf</p>
+              <img src={logoSrc} alt="Logo" height="10" width="10" />
+            </div>
+          </div>
+        </div>
+        <div class="col-span-8 col-start-3">
+          <div class="size-full text-sm">
+            <p>
+              This is the first website I build from scratch after learning some
+              js and React. <br />
+              <br /> This site is built with Astro and is hosted on Vercel, you can
+              view the code source here. I used Tailwind CSS framework and the font
+              is Spline Sans Mono only.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+    <footer class="flex w-full flex-row items-center pt-6">
+      <button class="flex w-full justify-start pr-6 text-sm tracking-wide"
+        >vaimiti.dock@gmail.com</button
+      >
+      <p class="flex w-full justify-center whitespace-nowrap text-sm">
+        Made with
+        <img src={logoSrc} alt="Logo" height="13" width="13" class="mx-2" />
+        by kroostille
+      </p>
+      <div class="flex w-full flex-row items-center justify-end text-sm">
+        <button class="pl-6 text-sm tracking-wider">Twitter</button>
+        <button class="pl-6 text-sm tracking-wider">LinkedIn</button>
+        <button class="pl-6 text-sm tracking-wider">Behnace</button>
+        <button class="pl-6 text-sm tracking-wider">Resume</button>
+      </div>
+    </footer>
   </main>
 </Layout>
 
 <style>
   main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  .list-box {
-    height: 200px;
-    overflow: hidden;
-    background: #fff;
-  }
-  .list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  .list li {
-    flex: 1;
-  }
-
-  .list li div {
-    display: block;
-    background: #161616;
-    min-height: 100vh;
-  }
-
-  .list:hover div {
-    transform: translate(0, 200px);
-    transition: 0.5s;
-  }
-  .list li:nth-child(1) div {
-    transition-delay: 0s;
-  }
-  .list li:nth-child(2) div {
-    transition-delay: 0.05s;
-  }
-  .list li:nth-child(3) div {
-    transition-delay: 0.1s;
-  }
-  .list li:nth-child(4) div {
-    transition-delay: 0.15s;
-  }
-  .list li:nth-child(5) div {
-    transition-delay: 0.2s;
-  }
-  .list li:nth-child(6) div {
-    transition-delay: 0.25s;
+    width: 100%;
   }
 </style>
