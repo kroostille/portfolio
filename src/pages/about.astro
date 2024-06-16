@@ -1,0 +1,165 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import AboutDetail from "../components/AboutDetail.astro";
+import ImageCard from "../components/ImageCard.astro";
+const logoSrc = "/src/assets/logo.svg";
+const pfpSrc = "/src/assets/pfp.png";
+---
+
+<Layout title="About Vaimiti DOCK">
+  <main class="px-8 py-6">
+    <Navigation />
+    {/* Section About */}
+    <div class="flex flex-row space-x-6 border-b-2 border-dotted py-40">
+      <div class="h-full w-1/4 flex-none">
+        <img
+          src={pfpSrc}
+          alt="Photo of me"
+          class="h-full overflow-hidden rounded-md"
+        />
+      </div>
+      <div class="h-fit">
+        <div class="flex flex-row items-baseline pb-12">
+          <div class="flex flex-row items-baseline">
+            <p class="pr-0.5 text-3xl font-medium">Ab</p>
+            <img src={logoSrc} alt="Logo" height="18" width="18" />
+            <p class="pl-0.5 text-3xl font-medium">ut</p>
+          </div>
+          <div class="flex flex-row items-baseline">
+            <p class="pl-3 pr-0.5 text-3xl font-medium">me</p>
+          </div>
+        </div>
+        <div class="flex flex-col pb-12">
+          <div class="flex flex-row items-baseline pb-3">
+            <p class="pr-0.5 text-base font-medium">St</p>
+            <img src={logoSrc} alt="Logo" height="10" width="10" />
+            <p class="pl-0.5 text-base font-medium">ry</p>
+          </div>
+          <p class="text-sm">
+            I have studied International Business and Digital Business before
+            even knowing what UX/UI design is. It was after my studies and by
+            learning react code that I heard about the guys behind the scene
+            designing the interfaces. I always had the tendency during school to
+            produce as much aesthetically and synthetic works to present that it
+            naturally came to me to become Product Designer.
+          </p>
+        </div>
+        <div class="grid grid-flow-row grid-cols-3">
+          <div class="flex flex-col">
+            <div class="flex flex-row items-baseline pb-3">
+              <p class="pr-0.5 text-base font-medium">Missi</p>
+              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <p class="pl-0.5 text-base font-medium">ns</p>
+            </div>
+            <ul>
+              <li><AboutDetail text="Brand Identity" /></li>
+              <li><AboutDetail text="UX Research" /></li>
+              <li><AboutDetail text="Interface Design" /></li>
+              <li><AboutDetail text="Product Audit" /></li>
+              <li><AboutDetail text="Design System" /></li>
+              <li><AboutDetail text="Web Design" /></li>
+            </ul>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex flex-row items-baseline pb-3">
+              <p class="pr-0.5 text-base font-medium">T</p>
+              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <img
+                src={logoSrc}
+                alt="Logo"
+                height="10"
+                width="10"
+                class="ml-0.5"
+              />
+              <p class="pl-0.5 text-base font-medium">ls</p>
+            </div>
+            <ul>
+              <li><AboutDetail text="Figma" /></li>
+              <li><AboutDetail text="Rive" /></li>
+              <li><AboutDetail text="Adobe Illustrator" /></li>
+              <li><AboutDetail text="After Effect" /></li>
+              <li><AboutDetail text="Spline" /></li>
+              <li><AboutDetail text="Framer" /></li>
+            </ul>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex flex-row items-baseline pb-3">
+              <p class="pr-0.5 text-base font-medium">H</p>
+              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <p class="pl-0.5 text-base font-medium">bbies</p>
+            </div>
+            <ul>
+              <li><AboutDetail text="Cooking" /></li>
+              <li><AboutDetail text="Minecraft" /></li>
+              <li><AboutDetail text="K-drama" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/* Section Photos */}
+    <div class="flex flex-row items-start border-b-2 border-dotted pb-32 pt-40">
+      <div class="flex w-full flex-row space-x-6">
+        <div class="h-full w-1/4 flex-none">
+          <div class="flex flex-row items-baseline">
+            <p class="pr-2 text-base font-medium">Sharing</p>
+            <div class="flex flex-row items-baseline">
+              <p class="pr-0.5 text-base font-medium">ph</p>
+              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <p class="pl-0.5 text-base font-medium">t</p>
+              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <p class="pl-0.5 text-base font-medium">s</p>
+            </div>
+          </div>
+          <p class="pt-4 text-sm">
+            I’ve travelled quite a lot since and here are some of the photos I
+            took.
+          </p>
+        </div>
+        <div class="grid grid-flow-row grid-cols-3 gap-4">
+          <div class="flex flex-col gap-6">
+            <ImageCard
+              thumbnail="/src/assets/photos/chinatown-bangkok.jpeg"
+              description1="Chinatown, Bangkok"
+              description2="May, 2024"
+            />
+            <ImageCard
+              thumbnail="/src/assets/photos/bridge-chongqing.jpg"
+              description1="Qiansimen Bridge, Chongqing"
+              description2="April, 2019"
+            />
+          </div>
+          <div class="flex flex-col gap-6">
+            <ImageCard
+              thumbnail="/src/assets/photos/rommaninat-bangkok.jpeg"
+              description1="Rommaninat Park, Bangkok"
+              description2="May, 2024"
+            />
+            <ImageCard
+              thumbnail="/src/assets/photos/village-chongqing.jpg"
+              description1="Hongyadong, Chongqing"
+              description2="April, 2019"
+            />
+          </div>
+          <div class="flex flex-col gap-6">
+            <ImageCard
+              thumbnail="/src/assets/photos/mykhe-danang.jpeg"
+              description1="My Khe Beach, Da Nang"
+              description2="June, 2024"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    height: 100%;
+  }
+</style>

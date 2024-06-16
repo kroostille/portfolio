@@ -1,0 +1,17 @@
+---
+const logoSrc = "/src/assets/logo.svg";
+import Link from "./Link.astro";
+---
+
+<footer class="flex w-full flex-row items-center pt-6">
+  <p class="flex w-full whitespace-nowrap text-sm">
+    Made with
+    <img src={logoSrc} alt="Logo" height="13" width="13" class="mx-2" />
+    by kroostille
+  </p>
+  <div class="flex w-full flex-row items-center justify-end space-x-6 text-sm">
+    <Link href="">Twitter</Link>
+    <Link href="">Email</Link>
+    <Link href="">Resume</Link>
+  </div>
+</footer>

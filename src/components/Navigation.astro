@@ -1,0 +1,21 @@
+---
+const logoSrc = "/src/assets/logo.svg";
+import Link from "./Link.astro";
+---
+
+<nav class="flex w-full flex-row items-center space-x-6">
+  <div class="flex w-1/4 flex-none flex-row items-center">
+    <img src={logoSrc} alt="Logo" class="pr-1.5" />
+    <p class="text-sm font-medium">VAI.D</p>
+  </div>
+  <menu class="flex w-full justify-between space-x-4 text-sm">
+    <Link href="/">Home</Link>
+    <p class="text-sm">&middot</p>
+    <Link href="/about">About</Link>
+    <p class="text-sm">&middot</p>
+    <Link href="/playground">Playground</Link>
+    <p class="text-sm">&middot</p>
+    <Link href="mailto:vaimiti.dock@gmail.com">Contact</Link>
+  </menu>
+  <p class="flex w-full justify-end whitespace-nowrap text-sm">08:53 Bangkok</p>
+</nav>

@@ -1,0 +1,25 @@
+---
+const arrowDownRightSrc = "/src/assets/arrow-turn-down-right.svg";
+
+interface Props {
+  thumbnail: string;
+  description1: string;
+  description2: string;
+}
+
+const { thumbnail, description1, description2 } = Astro.props;
+---
+
+<div class="flex w-full flex-col">
+  <div class="content-start overflow-hidden rounded-xl">
+    <img src={thumbnail} alt={description1} />
+  </div>
+  <div class="flex flex-row items-baseline pt-2">
+    <img
+      src={arrowDownRightSrc}
+      alt="Arrow down right icon"
+      class="stroke-2 pr-2"
+    />
+    <p class="text-sm">{description1} &middot {description2}</p>
+  </div>
+</div>

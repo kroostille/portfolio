@@ -1,0 +1,64 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import ImageCard from "../components/ImageCard.astro";
+import VideoCard from "../components/VideoCard.astro";
+
+const logoSrc = "/src/assets/logo.svg";
+---
+
+<Layout title="Vaimiti DOCK | Playground">
+  <main class="size-full px-8 py-6">
+    <Navigation />
+    {/* Hero section */}
+    <div class="flex flex-col border-b-2 border-dotted pb-32 pl-8 pt-40">
+      <div class="flex w-3/4 flex-col place-self-end">
+        <div class="flex flex-row items-baseline">
+          <p class="pr-0.5 text-3xl font-medium">Playgr</p>
+          <img src={logoSrc} alt="Logo" height="18" width="18" />
+          <p class="pl-0.5 text-3xl font-medium">und</p>
+        </div>
+        <p class="pt-2 text-sm">
+          Some of my design, code and animation experiments.
+        </p>
+      </div>
+    </div>
+    {/* Section lab */}
+
+    <div
+      class="grid grid-flow-row grid-cols-3 gap-4 border-b-2 border-dotted py-40"
+    >
+      <div class="flex flex-col gap-6">
+        <VideoCard
+          source="/src/assets/experiments/figma-button.mp4"
+          type="video/mp4"
+          description1="Button pulse"
+          description2="Figma"
+        />
+      </div>
+      <div class="flex flex-col gap-6">
+        <ImageCard
+          thumbnail="/src/assets/experiments/ultra-gradient.jpg"
+          description1="Moving gradients"
+          description2="Figma"
+        />
+      </div>
+      <div class="flex flex-col gap-6">
+        <VideoCard
+          source="/src/assets/experiments/neon-line.mp4"
+          type="video/mp4"
+          description1="Neon line"
+          description2="Figma"
+        />
+      </div>
+    </div>
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+</style>
