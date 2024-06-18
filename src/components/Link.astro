@@ -1,11 +1,17 @@
 ---
 interface Props {
   href: string;
+  external?: boolean;
 }
 
 const props = Astro.props;
 ---
 
-<a href={props.href} class="text-sm tracking-wide text-slate-800">
+<a
+  href={props.href}
+  class="text-sm font-medium tracking-wide text-slate-800"
+  target={props.external ? "_blank" : "_self"}
+  rel={props.external ? "noopener noreferrer" : ""}
+>
   <slot />
 </a>
