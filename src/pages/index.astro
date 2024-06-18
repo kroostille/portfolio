@@ -1,12 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const logoSrc = "/src/assets/logo.svg";
 import ProjectCard from "../components/ProjectCard.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Vaimiti DOCK | Design Portfolio">
+<BaseLayout title="Vaimiti DOCK | Design Portfolio">
   <main class="size-full px-8 py-6">
     <Navigation />
     {/* Hero section */}
@@ -165,7 +165,7 @@ import Footer from "../components/Footer.astro";
     </div>
     <Footer />
   </main>
-</Layout>
+</BaseLayout>
 
 <style>
   main {

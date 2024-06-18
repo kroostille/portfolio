@@ -1,14 +1,14 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
-import Layout from "../layouts/Layout.astro";
 import ImageCard from "../components/ImageCard.astro";
 import VideoCard from "../components/VideoCard.astro";
 
 const logoSrc = "/src/assets/logo.svg";
 ---
 
-<Layout title="Vaimiti DOCK | Playground">
+<BaseLayout title="Vaimiti DOCK | Playground">
   <main class="size-full px-8 py-6">
     <Navigation />
     {/* Hero section */}
@@ -55,7 +55,7 @@ const logoSrc = "/src/assets/logo.svg";
     </div>
     <Footer />
   </main>
-</Layout>
+</BaseLayout>
 
 <style>
   main {
