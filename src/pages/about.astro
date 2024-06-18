@@ -2,8 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AboutDetail from "../components/AboutDetail.astro";
 import ImageCard from "../components/ImageCard.astro";
-const logoSrc = "/src/assets/logo.svg";
-const pfpSrc = "/src/assets/pfp.png";
 ---
 
 <BaseLayout title="About Vaimiti DOCK">
@@ -12,7 +10,7 @@ const pfpSrc = "/src/assets/pfp.png";
     <div class="flex flex-row space-x-6 border-b-2 border-dotted py-40">
       <div class="h-full w-1/4 flex-none">
         <img
-          src={pfpSrc}
+          src="/assets/pfp.png"
           alt="Photo of me"
           class="h-full overflow-hidden rounded-md"
         />
@@ -21,7 +19,7 @@ const pfpSrc = "/src/assets/pfp.png";
         <div class="flex flex-row items-baseline pb-12">
           <div class="flex flex-row items-baseline">
             <p class="pr-0.5 text-3xl font-medium">Ab</p>
-            <img src={logoSrc} alt="Logo" height="18" width="18" />
+            <img src="assets/logo.svg" alt="Logo" height="18" width="18" />
             <p class="pl-0.5 text-3xl font-medium">ut</p>
           </div>
           <div class="flex flex-row items-baseline">
@@ -31,7 +29,7 @@ const pfpSrc = "/src/assets/pfp.png";
         <div class="flex flex-col pb-12">
           <div class="flex flex-row items-baseline pb-3">
             <p class="pr-0.5 text-base font-medium">St</p>
-            <img src={logoSrc} alt="Logo" height="10" width="10" />
+            <img src="/assets/logo.svg" alt="Logo" height="10" width="10" />
             <p class="pl-0.5 text-base font-medium">ry</p>
           </div>
           <p class="text-sm">
@@ -47,7 +45,7 @@ const pfpSrc = "/src/assets/pfp.png";
           <div class="flex flex-col">
             <div class="flex flex-row items-baseline pb-3">
               <p class="pr-0.5 text-base font-medium">Missi</p>
-              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <img src="/assets/logo.svg" alt="Logo" height="10" width="10" />
               <p class="pl-0.5 text-base font-medium">ns</p>
             </div>
             <ul>
@@ -62,9 +60,9 @@ const pfpSrc = "/src/assets/pfp.png";
           <div class="flex flex-col">
             <div class="flex flex-row items-baseline pb-3">
               <p class="pr-0.5 text-base font-medium">T</p>
-              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <img src="/assets/logo.svg" alt="Logo" height="10" width="10" />
               <img
-                src={logoSrc}
+                src="/assets/logo.svg"
                 alt="Logo"
                 height="10"
                 width="10"
@@ -84,7 +82,7 @@ const pfpSrc = "/src/assets/pfp.png";
           <div class="flex flex-col">
             <div class="flex flex-row items-baseline pb-3">
               <p class="pr-0.5 text-base font-medium">H</p>
-              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <img src="/assets/logo.svg" alt="Logo" height="10" width="10" />
               <p class="pl-0.5 text-base font-medium">bbies</p>
             </div>
             <ul>
@@ -104,9 +102,9 @@ const pfpSrc = "/src/assets/pfp.png";
             <p class="pr-2 text-base font-medium">Sharing</p>
             <div class="flex flex-row items-baseline">
               <p class="pr-0.5 text-base font-medium">ph</p>
-              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <img src="/assets/logo.svg" alt="Logo" height="10" width="10" />
               <p class="pl-0.5 text-base font-medium">t</p>
-              <img src={logoSrc} alt="Logo" height="10" width="10" />
+              <img src="/assets/logo.svg" alt="Logo" height="10" width="10" />
               <p class="pl-0.5 text-base font-medium">s</p>
             </div>
           </div>
@@ -118,31 +116,31 @@ const pfpSrc = "/src/assets/pfp.png";
         <div class="grid grid-flow-row grid-cols-3 gap-4">
           <div class="flex flex-col gap-6">
             <ImageCard
-              thumbnail="/src/assets/photos/chinatown-bangkok.jpeg"
+              thumbnail="/assets/photos/chinatown-bangkok.jpeg"
               description1="Chinatown, Bangkok"
               description2="May, 2024"
             />
             <ImageCard
-              thumbnail="/src/assets/photos/bridge-chongqing.jpg"
+              thumbnail="/assets/photos/bridge-chongqing.jpg"
               description1="Qiansimen Bridge, Chongqing"
               description2="April, 2019"
             />
           </div>
           <div class="flex flex-col gap-6">
             <ImageCard
-              thumbnail="/src/assets/photos/rommaninat-bangkok.jpeg"
+              thumbnail="/assets/photos/rommaninat-bangkok.jpeg"
               description1="Rommaninat Park, Bangkok"
               description2="May, 2024"
             />
             <ImageCard
-              thumbnail="/src/assets/photos/village-chongqing.jpg"
+              thumbnail="/assets/photos/village-chongqing.jpg"
               description1="Hongyadong, Chongqing"
               description2="April, 2019"
             />
           </div>
           <div class="flex flex-col gap-6">
             <ImageCard
-              thumbnail="/src/assets/photos/mykhe-danang.jpeg"
+              thumbnail="/assets/photos/mykhe-danang.jpeg"
               description1="My Khe Beach, Da Nang"
               description2="June, 2024"
             />
