@@ -8,8 +8,9 @@ export type Project = {
   tools: string;
   link: string;
   linkText: string;
-  media: string;
-  src: string;
+  mediaType: "video" | "image";
+  mediaSrc: string;
+  mediaAlt: string;
 };
 
 export const projects: Project[] = [
@@ -27,7 +28,8 @@ export const projects: Project[] = [
     tools: "Figma, After Effects",
     link: "https://onix-7jbovx471-0xyami.vercel.app/index.html",
     linkText: "Play demo",
-    media: "video",
-    src: "/assets/projects/onix/onix-intro.mp4",
+    mediaType: "video",
+    mediaSrc: "/assets/projects/onix/onix-intro.mp4",
+    mediaAlt: "",
   },
 ];
