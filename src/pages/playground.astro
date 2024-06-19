@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ImageCard from "../components/ImageCard.astro";
-import VideoCard from "../components/VideoCard.astro";
+import DefaultCard from "../components/DefaultCard.astro";
 ---
 
 <BaseLayout title="Vaimiti DOCK | Playground">
@@ -25,26 +24,33 @@ import VideoCard from "../components/VideoCard.astro";
       class="grid grid-flow-row grid-cols-3 gap-4 border-b-2 border-dotted py-40"
     >
       <div class="flex flex-col gap-6">
-        <VideoCard
-          source="/assets/experiments/figma-button.mp4"
-          type="video/mp4"
-          description1="Button pulse"
-          description2="Figma"
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/figma-button.mp4"
+          width="w-auto"
+          justify="start"
+          title="Button pulse • Figma"
+          showDescription={false}
         />
       </div>
       <div class="flex flex-col gap-6">
-        <ImageCard
-          thumbnail="/assets/experiments/ultra-gradient.jpg"
-          description1="Moving gradients"
-          description2="Figma"
+        <DefaultCard
+          mediaType="image"
+          mediaSrc="/assets/experiments/ultra-gradient.jpg"
+          width="w-auto"
+          justify="start"
+          title="Moving gradients • Figma"
+          showDescription={false}
         />
       </div>
       <div class="flex flex-col gap-6">
-        <VideoCard
-          source="/assets/experiments/neon-line.mp4"
-          type="video/mp4"
-          description1="Neon line"
-          description2="Figma"
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/neon-line.mp4"
+          width="w-auto"
+          justify="start"
+          title="Neon line • Figma"
+          showDescription={false}
         />
       </div>
     </div>

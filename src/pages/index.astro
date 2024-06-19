@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import DefaultCard from "../components/DefaultCard.astro";
 ---
 
 <BaseLayout title="Vaimiti DOCK | Design Portfolio">
@@ -50,45 +50,56 @@ import ProjectCard from "../components/ProjectCard.astro";
         </div>
         <div class="flex w-3/4 flex-col">
           <div class="grid-col-6 grid grid-flow-row gap-4 pb-8">
-            <div class="col-span-4 col-start-1 row-span-1">
-              <ProjectCard
-                thumbnail="/assets/covers/ichiba-thumbnail.jpg"
-                alt="Ichiba market project thumbnail"
+            <a href="" class="col-span-4 col-start-1 row-span-1">
+              <DefaultCard
+                mediaType="image"
+                mediaSrc="/assets/covers/ichiba-thumbnail.jpg"
                 title="Ichiba Market"
-                category="Web Design"
-                date="2024"
+                width="w-auto"
+                justify="start"
+                showDescription={true}
+                description1="Web Design"
+                description2="2024"
               />
-            </div>
-            <div class="col-span-2 col-start-5 row-span-2">
-              <ProjectCard
-                thumbnail="/assets/covers/onix-thumbnail.jpg"
-                alt="Onix wallet project thumbnail"
+            </a>
+            <a href="/onix" class="col-span-2 col-start-5 row-span-2">
+              <DefaultCard
+                mediaType="image"
+                mediaSrc="/assets/covers/onix-thumbnail.jpg"
                 title="Onix Wallet Extension"
-                category="UX/UI Design"
-                date="2023"
+                width="w-auto"
+                justify="start"
+                showDescription={true}
+                description1="UX/UI Design"
+                description2="2023"
               />
-            </div>
+            </a>
           </div>
           <div class="grid-col-6 grid grid-flow-row gap-4">
-            <div class="col-span-2 col-start-1 row-span-2">
-              <ProjectCard
-                thumbnail="/assets/covers/shadow-wallet-thumbnail.jpg"
-                alt="Shadow wallet project thumbnail"
+            <a href="" class="col-span-2 col-start-1 row-span-2">
+              <DefaultCard
+                mediaType="image"
+                mediaSrc="/assets/covers/shadow-wallet-thumbnail.jpg"
                 title="Shadow Wallet Extension"
-                category="UX/UI Design"
-                date="2022-2023"
+                width="w-auto"
+                justify="start"
+                showDescription={true}
+                description1="UX/UI Design"
+                description2="2022-2023"
               />
-            </div>
-
-            <div class="col-span-4 col-start-3 row-span-1">
-              <ProjectCard
-                thumbnail="/assets/covers/shadow-exchange-thumbnail.jpg"
-                alt="Shadow Exchange project thumbnail"
+            </a>
+            <a href="" class="col-span-4 col-start-3 row-span-1">
+              <DefaultCard
+                mediaType="image"
+                mediaSrc="/assets/covers/shadow-exchange-thumbnail.jpg"
                 title="Shadow NFT Exchange"
-                category="UX/UI Design"
-                date="2021-2023"
+                width="w-auto"
+                justify="start"
+                showDescription={true}
+                description1="UX/UI Design"
+                description2="2021-2023"
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -110,24 +121,30 @@ import ProjectCard from "../components/ProjectCard.astro";
         </div>
         <div class="flex w-3/4">
           <div class="grid-col-6 grid grid-flow-row gap-4">
-            <div class="col-span-4 col-start-1 row-span-1">
-              <ProjectCard
-                thumbnail="/assets/covers/boc-thumbnail.jpg"
-                alt="Build onchain project thumbnail"
+            <a href="" class="col-span-4 col-start-1 row-span-1">
+              <DefaultCard
+                mediaType="image"
+                mediaSrc="/assets/covers/boc-thumbnail.jpg"
                 title="Build onchain"
-                category="UX/UI Design"
-                date="2024"
+                width="w-auto"
+                justify="start"
+                showDescription={true}
+                description1="UX/UI Design"
+                description2="2024"
               />
-            </div>
-            <div class="col-span-2 col-start-5 row-span-2">
-              <ProjectCard
-                thumbnail="/assets/covers/gimmy-thumbnail.jpg"
-                alt="Gimmy mobile app project thumbnail"
+            </a>
+            <a href="" class="col-span-2 col-start-5 row-span-2">
+              <DefaultCard
+                mediaType="image"
+                mediaSrc="/assets/covers/gimmy-thumbnail.jpg"
                 title="Gimmy Mobile App"
-                category="UX/UI Design"
-                date="2024"
+                width="w-auto"
+                justify="start"
+                showDescription={true}
+                description1="UX/UI Design"
+                description2="2024"
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>

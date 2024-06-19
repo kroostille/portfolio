@@ -1,0 +1,48 @@
+---
+import Media from "./Media.astro";
+
+interface Props {
+  mediaType: "video" | "image";
+  mediaSrc: string;
+  width: string;
+  justify: "start" | "end";
+  title: string;
+  showDescription: boolean;
+  description1?: string;
+  description2?: string;
+}
+
+const props = Astro.props;
+
+const flowDirection =
+  props.justify === "start" ? "flex-row pl-1" : "flex-row-reverse pr-1";
+
+const arrowClass =
+  props.justify === "start" ? "stroke-2 pr-2" : "stroke-2 pr-2 -scale-x-100";
+
+const justifyClass =
+  props.justify === "start" ? "justify-start" : "justify-end";
+---
+
+<div class=`flex w-full flex-col ${props.width}`>
+  <Media type={props.mediaType} src={props.mediaSrc} alt={props.title} />
+  <div class=`flex ${justifyClass} pt-2`>
+    <div class=`flex ${flowDirection} flex-row items-baseline`>
+      <img
+        src="/assets/arrow-turn-down-right.svg"
+        alt="Arrow down right icon"
+        class={arrowClass}
+      />
+      <div class="flex flex-col">
+        <h2 class="text-sm font-medium">{props.title}</h2>
+        {
+          props.showDescription && props.description1 && props.description2 ? (
+            <p class="text-sm font-light">
+              {props.description1} &middot {props.description2}
+            </p>
+          ) : null
+        }
+      </div>
+    </div>
+  </div>
+</div>

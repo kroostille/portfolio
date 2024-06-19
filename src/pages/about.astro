@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AboutDetail from "../components/AboutDetail.astro";
-import ImageCard from "../components/ImageCard.astro";
+import DefaultCard from "../components/DefaultCard.astro";
+import Media from "../components/Media.astro";
 ---
 
 <BaseLayout title="About Vaimiti DOCK">
@@ -9,11 +10,7 @@ import ImageCard from "../components/ImageCard.astro";
     {/* Section About */}
     <div class="flex flex-row space-x-6 border-b-2 border-dotted py-40">
       <div class="h-full w-1/4 flex-none">
-        <img
-          src="/assets/pfp.png"
-          alt="Photo of me"
-          class="h-full overflow-hidden rounded-md"
-        />
+        <Media type="image" src="/assets/pfp.png" alt="Photo of me" />
       </div>
       <div class="h-fit">
         <div class="flex flex-row items-baseline pb-12">
@@ -113,36 +110,51 @@ import ImageCard from "../components/ImageCard.astro";
             took.
           </p>
         </div>
-        <div class="grid grid-flow-row grid-cols-3 gap-4">
+        <div class="flex flex-row gap-4">
           <div class="flex flex-col gap-6">
-            <ImageCard
-              thumbnail="/assets/photos/chinatown-bangkok.jpeg"
-              description1="Chinatown, Bangkok"
-              description2="May, 2024"
+            <DefaultCard
+              mediaType="image"
+              mediaSrc="/assets/photos/chinatown-bangkok.jpeg"
+              title="Chinatown, Bangkok • May 2024"
+              width="w-auto"
+              justify="start"
+              showDescription={false}
             />
-            <ImageCard
-              thumbnail="/assets/photos/bridge-chongqing.jpg"
-              description1="Qiansimen Bridge, Chongqing"
-              description2="April, 2019"
+            <DefaultCard
+              mediaType="image"
+              mediaSrc="/assets/photos/bridge-chongqing.jpg"
+              title="Qiansimen Bridge, Chongqing • April 2019"
+              width="w-auto"
+              justify="start"
+              showDescription={false}
             />
           </div>
           <div class="flex flex-col gap-6">
-            <ImageCard
-              thumbnail="/assets/photos/rommaninat-bangkok.jpeg"
-              description1="Rommaninat Park, Bangkok"
-              description2="May, 2024"
+            <DefaultCard
+              mediaType="image"
+              mediaSrc="/assets/photos/rommaninat-bangkok.jpeg"
+              title="Rommaninat Park, Bangkok • May 2024"
+              width="w-auto"
+              justify="start"
+              showDescription={false}
             />
-            <ImageCard
-              thumbnail="/assets/photos/village-chongqing.jpg"
-              description1="Hongyadong, Chongqing"
-              description2="April, 2019"
+            <DefaultCard
+              mediaType="image"
+              mediaSrc="/assets/photos/village-chongqing.jpg"
+              title="Hongyadong, Chongqing • April 2019"
+              width="w-auto"
+              justify="start"
+              showDescription={false}
             />
           </div>
           <div class="flex flex-col gap-6">
-            <ImageCard
-              thumbnail="/assets/photos/mykhe-danang.jpeg"
-              description1="My Khe Beach, Da Nang"
-              description2="June, 2024"
+            <DefaultCard
+              mediaType="image"
+              mediaSrc="/assets/photos/mykhe-danang.jpeg"
+              title="My Khe Beach, Da Nang • June 2024"
+              width="w-auto"
+              justify="start"
+              showDescription={false}
             />
           </div>
         </div>
