@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import Link from "../components/Link.astro";
 import type { Project } from "../lib/projects";
+import Media from "../components/Media.astro";
 
 interface Props {
   project: Project;
@@ -43,17 +44,11 @@ const props = Astro.props;
         <h4 class="font-medium">{props.project.scope}</h4>
         <h4 class="font-medium">{props.project.year}</h4>
       </div>
-      <div class="overflow-hidden rounded-xl">
-        {
-          props.project.media === "video" ? (
-            <video playsinline autoplay loop>
-              <source src={props.project.src} type="video/mp4" />
-            </video>
-          ) : (
-            <img src={props.project.src} alt={props.project.name} />
-          )
-        }
-      </div>
+      <Media
+        type={props.project.mediaType}
+        src={props.project.mediaSrc}
+        alt={props.project.mediaAlt}
+      />
     </div>
   </div>
   <slot />
