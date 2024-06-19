@@ -1,0 +1,60 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Link from "../components/Link.astro";
+import type { Project } from "../lib/projects";
+
+interface Props {
+  project: Project;
+}
+
+const props = Astro.props;
+---
+
+<BaseLayout title={props.project.name}>
+  <div class="flex space-x-6 px-8 py-40">
+    <div class="flex w-1/4 flex-col space-y-8 pr-4">
+      <div class="flex flex-col space-y-2">
+        <h3 class="font-medium">{props.project.name}</h3>
+        <p class="text-sm">
+          {props.project.description}
+        </p>
+      </div>
+      <div class="flex flex-col space-y-1">
+        <h4 class="font-medium">Team</h4>
+        {
+          props.project.team.map((teamMember) => (
+            <p class="text-sm">
+              {teamMember.role}: {teamMember.name}
+            </p>
+          ))
+        }
+      </div>
+      <div class="flex flex-col space-y-1">
+        <h4 class="font-medium">Design tools</h4>
+        <p class="text-sm">{props.project.tools}</p>
+      </div>
+      <div class="flex flex-col space-y-1">
+        <h4 class="font-medium">Link</h4>
+        <Link href={props.project.link} external>{props.project.linkText}</Link>
+      </div>
+    </div>
+    <div class="flex w-3/4 flex-col space-y-2">
+      <div class="flex flex-row justify-between">
+        <h4 class="font-medium">{props.project.scope}</h4>
+        <h4 class="font-medium">{props.project.year}</h4>
+      </div>
+      <div class="overflow-hidden rounded-xl">
+        {
+          props.project.media === "video" ? (
+            <video playsinline autoplay loop>
+              <source src={props.project.src} type="video/mp4" />
+            </video>
+          ) : (
+            <img src={props.project.src} alt={props.project.name} />
+          )
+        }
+      </div>
+    </div>
+  </div>
+  <slot />
+</BaseLayout>
