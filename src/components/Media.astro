@@ -8,19 +8,14 @@ interface Props {
 const props = Astro.props;
 ---
 
-<div class="content-start overflow-hidden rounded-xl">
+<div class="content-start overflow-hidden rounded-xl border border-neutral-950">
   {
     props.type === "video" ? (
-      <video
-        playsinline
-        autoplay
-        loop
-        class="scale-105 overflow-hidden rounded-xl"
-      >
+      <video playsinline autoplay loop class="scale-105">
         <source src={props.src} type="video/mp4" />
       </video>
     ) : (
-      <img src={props.src} alt={props.alt} class="overflow-hidden rounded-xl" />
+      <img src={props.src} alt={props.alt} />
     )
   }
 </div>
