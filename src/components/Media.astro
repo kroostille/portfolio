@@ -11,7 +11,7 @@ const props = Astro.props;
 <div class="content-start overflow-hidden rounded-xl border border-neutral-950">
   {
     props.type === "video" ? (
-      <video playsinline autoplay loop muted class="scale-105">
+      <video playsinline autoplay loop muted>
         <source src={props.src} type="video/mp4" />
       </video>
     ) : (
