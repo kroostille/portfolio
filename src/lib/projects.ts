@@ -56,7 +56,7 @@ export const projects: Project[] = [
       "Shadow Exchange - old VIV3 - is an NFT marketplace with expanded and live analytics on the Flow blockchain. I have spent 2 years working at Shadow as Product designer. Working at the stage of a start-up, I have had to cover various disciplines from branding, UX research and design to project planning and management.",
     team: [
       { role: "Visual Identity", name: "Vaimiti DOCK" },
-      { role: "Web Designer", name: "Vaimiti DOCK" },
+      { role: "Product Designer", name: "Vaimiti DOCK" },
       { role: "Animation", name: "Tasya ANGGITA RACHMANI" },
     ],
     tools: "Figma, Adobe Illustrator, AfterEffect, Rive, Linear, Notion",
