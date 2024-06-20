@@ -1,0 +1,85 @@
+---
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import { projects } from "../lib/projects";
+import DefaultCard from "../components/DefaultCard.astro";
+import Media from "../components/Media.astro";
+
+const project = projects.find((project) => project.id === "ichiba");
+---
+
+<ProjectLayout project={project!}>
+  <main class="size-full">
+    <div class="flex w-full px-8 pb-40">
+      <DefaultCard
+        mediaType="image"
+        mediaSrc="/assets/projects/ichiba/ichiba-market.jpg"
+        width="w-9/12"
+        justify="start"
+        title="Ichiba marketplace"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex w-full justify-end px-8 pb-40">
+      <DefaultCard
+        mediaType="image"
+        mediaSrc="/assets/projects/ichiba/ichiba-product.jpg"
+        width="w-9/12"
+        justify="end"
+        title="Product page"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex w-full px-8 pb-40">
+      <DefaultCard
+        mediaType="image"
+        mediaSrc="/assets/projects/ichiba/ichiba-cart.jpg"
+        width="w-4/12"
+        justify="start"
+        title="Shopping cart"
+        showDescription={false}
+      />
+    </div>
+    <div class="mb-40 flex max-w-full overflow-visible">
+      <div class="flex flex-row flex-nowrap space-x-4 overflow-scroll px-8">
+        <div class="flex w-6/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/ichiba/account-home.jpg"
+            alt="ichiba-settings"
+          />
+        </div>
+        <div class="flex w-6/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/ichiba/account-update.jpg"
+            alt="ichiba-settings"
+          />
+        </div>
+        <div class="flex w-6/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/ichiba/account-no-orders.jpg"
+            alt="ichiba-settings"
+          />
+        </div>
+        <div class="flex w-6/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/ichiba/account-orders.jpg"
+            alt="ichiba-settings"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="flex w-full px-8 pb-40">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/ichiba/ichiba-about.mp4"
+        width="w-9/12"
+        justify="start"
+        title="About Ichiba Market"
+        showDescription={false}
+      />
+    </div>
+  </main>
+</ProjectLayout>

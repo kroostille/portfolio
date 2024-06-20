@@ -1,5 +1,5 @@
 export type Project = {
-  id: "onix";
+  id: string;
   name: string;
   scope: string;
   year: number;
@@ -31,5 +31,20 @@ export const projects: Project[] = [
     mediaType: "video",
     mediaSrc: "/assets/projects/onix/onix-intro.mp4",
     mediaAlt: "",
+  },
+  {
+    id: "ichiba",
+    name: "Ichiba Marketplace",
+    scope: "Web Design",
+    year: 2024,
+    description:
+      "Ichiba Market is a web design project of an e-commerce marketplace with a minimalist and consistent design. Through this project I wanted to experiment with CMS management and animations using Framer.",
+    team: [{ role: "Web Designer", name: "Vaimiti Dock" }],
+    tools: "Figma, Mid Journey, Framer",
+    link: "https://ichiba-market.framer.website/",
+    linkText: "Preview Framer template",
+    mediaType: "image",
+    mediaSrc: "/assets/projects/ichiba/ichiba-intro.jpg",
+    mediaAlt: "Ichiba marketplace",
   },
 ];
