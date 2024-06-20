@@ -66,4 +66,23 @@ export const projects: Project[] = [
     mediaSrc: "/assets/projects/shadow-exchange/shadow-exchange-intro.jpg",
     mediaAlt: "Shadow NFT exchange",
   },
+  {
+    id: "shadow-wallet",
+    name: "Shadow Wallet Extension",
+    scope: "Product Design",
+    year: "2022-2023",
+    description:
+      "Shadow Wallet - old Flipper - is the first non-custodial wallet on Flow blockchain to store  web3 assets. As a non-custodial wallet, Shadow wallet does not require any personal information from users, ensuring a secure and private DeFi & NFT experience.",
+    team: [
+      { role: "Visual Identity", name: "Vaimiti DOCK" },
+      { role: "Product Designer", name: "Vaimiti DOCK" },
+      { role: "Animation", name: "Tasya ANGGITA RACHMANI" },
+    ],
+    tools: "Figma, Adobe Illustrator, AfterEffect, Rive, Linear, Notion",
+    link: "https://shadow.app/wallet",
+    linkText: "Visit website",
+    mediaType: "image",
+    mediaSrc: "/assets/projects/shadow-wallet/shadow-wallet-intro.jpg",
+    mediaAlt: "Shadow wallet extension",
+  },
 ];

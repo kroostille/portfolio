@@ -1,0 +1,99 @@
+---
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import { projects } from "../lib/projects";
+import DefaultCard from "../components/DefaultCard.astro";
+import Media from "../components/Media.astro";
+
+const project = projects.find((project) => project.id === "shadow-wallet");
+---
+
+<ProjectLayout project={project!}>
+  <main class="size-full">
+    <div class="mb-40 flex max-w-full overflow-visible">
+      <div class="flex flex-row flex-nowrap space-x-4 overflow-scroll px-8">
+        <div class="flex w-3/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/shadow-wallet/setup-create.png"
+            alt="First wallet screen"
+          />
+        </div>
+        <div class="flex w-3/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/shadow-wallet/setup-password.png"
+            alt="Create password"
+          />
+        </div>
+        <div class="flex w-3/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/shadow-wallet/setup-progress.png"
+            alt="Generating new wallet"
+          />
+        </div>
+        <div class="flex w-3/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/shadow-wallet/setup-name.png"
+            alt="Give name to wallet"
+          />
+        </div>
+        <div class="flex w-3/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/shadow-wallet/setup-save.png"
+            alt="Save wallet key access"
+          />
+        </div>
+        <div class="flex w-3/12 flex-none">
+          <Media
+            type="image"
+            src="/assets/projects/shadow-wallet/setup-done.png"
+            alt="Set up wallet is done"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="flex w-full justify-end px-8 pb-40">
+    <DefaultCard
+      mediaType="image"
+      mediaSrc="/assets/projects/shadow-wallet/wallet-settings.png"
+      width="w-10/12"
+      justify="end"
+      title="Manage accounts and tokens"
+      showDescription={false}
+    />
+  </div>
+  <div class="flex w-full px-8 pb-40">
+    <DefaultCard
+      mediaType="video"
+      mediaSrc="/assets/projects/shadow-wallet/swap-tokens.mp4"
+      width="w-5/12"
+      justify="start"
+      title="Instantly swap tokens"
+      showDescription={false}
+    />
+  </div>
+  <div class="flex w-full justify-end px-8 pb-40">
+    <DefaultCard
+      mediaType="image"
+      mediaSrc="/assets/projects/shadow-wallet/nft-portfolio.png"
+      width="w-10/12"
+      justify="end"
+      title="Showcase & Transfer NFTs"
+      showDescription={false}
+    />
+  </div>
+  <div class="flex w-full px-8 pb-40">
+    <DefaultCard
+      mediaType="video"
+      mediaSrc="/assets/projects/shadow-wallet/list-nft.mp4"
+      width="w-5/12"
+      justify="start"
+      title="List NFTs on Shadow Exchange"
+      showDescription={false}
+    />
+  </div>
+</ProjectLayout>
