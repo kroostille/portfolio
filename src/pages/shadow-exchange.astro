@@ -1,0 +1,62 @@
+---
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import { projects } from "../lib/projects";
+import DefaultCard from "../components/DefaultCard.astro";
+
+const project = projects.find((project) => project.id === "shadow-exchange");
+---
+
+<ProjectLayout project={project!}>
+  <main class="size-full">
+    <div class="flex w-full px-8 pb-40">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/shadow-exchange/sync-balances.mp4"
+        width="w-9/12"
+        justify="start"
+        title="Syncronized wallet balances with market possibilities"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex w-full justify-end px-8 pb-40">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/shadow-exchange/bulk-buying.mp4"
+        width="w-9/12"
+        justify="end"
+        title="Bulk buying NFTs across marketplaces"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex w-full px-8 pb-40">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/shadow-exchange/metadata-view.mp4"
+        width="w-9/12"
+        justify="start"
+        title="NFT Metadata views and Activity panel"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex w-full justify-end px-8 pb-40">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/shadow-exchange/portfolio-analytics.mp4"
+        width="w-9/12"
+        justify="end"
+        title="Advanced stats and Batch listings from the portfolio view"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex w-full px-8 pb-40">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/shadow-exchange/rebrand.mp4"
+        width="w-9/12"
+        justify="start"
+        title="Rebranding: from VIV3 to Shadow"
+        showDescription={false}
+      />
+    </div>
+  </main>
+</ProjectLayout>
