@@ -2,13 +2,21 @@
 import Link from "./Link.astro";
 ---
 
-<footer class="flex w-full flex-row items-center px-8 py-6">
-  <p class="flex w-full whitespace-nowrap text-sm">
+<footer class="flex w-full flex-col-reverse px-4 py-6 sm:flex-row sm:px-8">
+  <p class="flex w-full items-center whitespace-nowrap text-sm">
     Made with
-    <img src="assets/logo.svg" alt="Logo" height="13" width="13" class="mx-2" />
+    <img
+      src="/assets/logo.svg"
+      alt="Logo"
+      height="13"
+      width="13"
+      class="mx-2"
+    />
     by kroostille
   </p>
-  <div class="flex w-full flex-row items-center justify-end space-x-6 text-sm">
+  <div
+    class="flex w-full flex-row items-start space-x-6 pb-4 text-sm sm:justify-end sm:pb-0"
+  >
     <Link href="" external>Twitter</Link>
     <Link href="" external>Email</Link>
     <Link href="" external>Resume</Link>

@@ -24,7 +24,7 @@ const justifyClass =
   props.justify === "start" ? "justify-start" : "justify-end";
 ---
 
-<div class=`flex w-full flex-col ${props.width}`>
+<div class=`flex flex-col ${props.width}`>
   <Media type={props.mediaType} src={props.mediaSrc} alt={props.title} />
   <div class=`flex ${justifyClass} pt-2`>
     <div class=`flex ${flowDirection} flex-row items-baseline`>
