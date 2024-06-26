@@ -1,73 +1,138 @@
 ---
 import Link from "./Link.astro";
 import Clock from "./Clock.astro";
-import {
-  Astronav,
-  MenuItems,
-  MenuIcon,
-  Dropdown,
-  DropdownItems,
-  DropdownSubmenu,
-} from "astro-navbar";
 ---
 
-<div class="flex w-full flex-col px-4 py-6 sm:py-0 md:px-8">
-  <Astronav>
-    <div class="flex w-full flex-col space-y-6 sm:flex-row sm:space-x-6">
-      <div class="flex w-full justify-between lg:w-1/3 lg:flex-none">
-        <a href="/" class="flex flex-none flex-row items-center">
-          <img src="/assets/logo.svg" alt="Logo" class="pr-1.5" />
-          <p class="text-sm font-medium">VAI.D</p>
-        </a>
-        <MenuIcon class="h-4 w-4 text-gray-800 sm:hidden" />
-      </div>
-      <MenuItems class="hidden sm:flex sm:pb-6 lg:w-full">
-        <ul class="flex flex-col sm:flex-row sm:space-x-6">
-          <li class="flex flex-nowrap sm:space-x-6">
-            <Link href="/"> Home </Link>
-            <p class="hidden text-sm sm:flex">&middot</p>
-          </li>
-          <li class="sm:flex sm:flex-nowrap sm:space-x-6">
-            <Link href="/about"> About </Link>
-            <p class="hidden text-sm sm:flex">&middot</p>
-          </li>
-          <li class="flex flex-nowrap sm:space-x-6">
-            <Link href="/playground"> Playground </Link>
-            <p class="hidden text-sm sm:flex">&middot</p>
-          </li>
-          <li class="flex flex-nowrap sm:space-x-6">
-            <Link href="mailto:vaimiti.dock@gmail.com">Contact</Link>
-          </li>
-        </ul>
-      </MenuItems>
-      <div class="hidden justify-end space-x-2 lg:flex lg:flex-nowrap">
-        <Clock />
-        <p class="text-sm">Malaysia</p>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById("menu");
+    const body = document.body;
+    let nav = document.getElementById("mobile-navigation");
+
+    if (menuButton) {
+      menuButton.addEventListener("click", () => {
+        const navMenu = document.querySelector(".navmenu-toggle");
+        if (navMenu) {
+          const isMenuOpen = !navMenu.classList.contains("hidden");
+          body.classList.toggle("overflow-hidden", isMenuOpen);
+          if (nav) {
+          nav.classList.toggle("bg-white"), !isMenuOpen;
+          nav.classList.toggle("invert"), !isMenuOpen;
+          nav.classList.toggle("mix-blend-difference"), !isMenuOpen;
+          nav.classList.toggle("h-screen"), !isMenuOpen;
+          }
+        }
+        document.querySelectorAll(".navmenu-toggle").forEach((element) => {
+          element.classList.toggle("hidden");
+        });
+      });
+    }
+  });
+</script>
+
+
+<nav id="mobile-navigation" class="fixed top-0 right-0 left-0 flex w-full flex-col space-y-6 px-4 py-6 sm:hidden invert mix-blend-difference">
+    <div class="flex w-full justify-between">
+      <a href="/" class="flex flex-none flex-row items-center">
+        <img src="/assets/logo.svg" alt="Logo" class="pr-1.5" />
+        <p class="text-sm font-medium">VAI.D</p>
+      </a>
+      <button id="menu" aria-label="Toggle Menu">
+        <svg
+          class="h-6 w-6 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            class="navmenu-toggle"
+            fill-rule="evenodd"
+            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+          >
+          </path>
+
+          <path
+            class="navmenu-toggle hidden"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+          >
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="navmenu-toggle hidden h-full"
+    >
+      <div class="flex flex-col h-full gap-6">
+        <div
+          class="flex w-full flex-col gap-4 pt-6 border-t-2 border-dotted border-zinc-200"
+        >
+          <Link href="/"> Home </Link>
+          <Link href="/about"> About </Link>
+          <Link href="/playground"> Playground </Link>
+          <Link href="mailto:vaimiti.dock@gmail.com">Contact</Link>
+        </div>
+        <div
+        class="flex w-full flex-col gap-4 pt-6 border-t-2 border-dotted border-zinc-200"
+        >
+          <Link href="" external> Twitter </Link>
+          <Link href="" external> LinkedIn </Link>
+          <Link href="" external> Behance </Link>
+          <Link href="" external>Resume</Link>
+        </div>
+        <div class="flex w-full grow flex-col gap-4 justify-end mb-2">
+          <div class="flex flex-nowrap space-x-2 text-zinc-500">
+            <Clock />
+            <p class="text-sm text-zinc-500">Malaysia</p>
+          </div>
+          <p class="flex w-full items-center whitespace-nowrap text-sm font-medium">
+            Made with
+            <img
+              src="/assets/logo.svg"
+              alt="Logo"
+              height="13"
+              width="13"
+              class="mx-2"
+            />
+            by kroostille
+          </p>
+        </div>
       </div>
     </div>
-  </Astronav>
-</div>
+</nav>
 
-{
-  /*
-<nav class="flex w-full flex-row items-center space-x-6 px-8 py-6">
-  <div class="flex w-1/3 flex-none flex-row items-center">
-    <img src="/assets/logo.svg" alt="Logo" class="pr-1.5" />
-    <p class="text-sm font-medium">VAI.D</p>
+<nav id="navigation" class="fixed right-0 left-0 top-0 hidden sm:flex sm:w-full sm:px-4 sm:py-6 md:px-8 sm:flex-row sm:space-x-6 invert mix-blend-difference">
+  <div class="flex lg:w-1/3 lg:flex-none">
+    <a href="/" class="flex flex-none flex-row items-center">
+      <img src="/assets/logo.svg" alt="Logo" class="pr-1.5" />
+      <p class="text-sm font-medium">VAI.D</p>
+    </a>
   </div>
-  <menu class="flex w-full space-x-8 text-sm">
-    <Link href="/">Home</Link>
-    <p class="text-sm">&middot</p>
-    <Link href="/about">About</Link>
-    <p class="text-sm">&middot</p>
-    <Link href="/playground">Playground</Link>
-    <p class="text-sm">&middot</p>
-    <Link href="mailto:vaimiti.dock@gmail.com">Contact</Link>
-  </menu>
-  <div class="sr-only flex flex-nowrap space-x-2 lg:not-sr-only">
+  <div
+    class="flex w-full justify-end lg:justify-start"
+  >
+    <ul
+      class="flex flex-row space-x-6"
+    >
+      <li class="flex flex-nowrap space-x-6">
+        <Link href="/"> Home </Link>
+        <p class="text-sm flex">&middot</p>
+      </li>
+      <li class="flex flex-nowrap space-x-6">
+        <Link href="/about"> About </Link>
+        <p class="text-sm flex">&middot</p>
+      </li>
+      <li class="flex flex-nowrap space-x-6">
+        <Link href="/playground"> Playground </Link>
+        <p class="text-sm flex">&middot</p>
+      </li>
+      <li class="flex flex-nowrap space-x-6">
+        <Link href="mailto:vaimiti.dock@gmail.com">Contact</Link>
+      </li>
+    </ul>
+  </div>
+  <div class="hidden lg:justify-end space-x-2 lg:flex lg:flex-nowrap  text-zinc-500">
     <Clock />
     <p class="text-sm">Malaysia</p>
   </div>
 </nav>
-*/
-}
