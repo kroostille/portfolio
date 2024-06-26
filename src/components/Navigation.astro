@@ -19,7 +19,7 @@ import Clock from "./Clock.astro";
           nav.classList.toggle("bg-white"), !isMenuOpen;
           nav.classList.toggle("invert"), !isMenuOpen;
           nav.classList.toggle("mix-blend-difference"), !isMenuOpen;
-          nav.classList.toggle("h-screen"), !isMenuOpen;
+          nav.classList.toggle("h-dvh"), !isMenuOpen;
           }
         }
         document.querySelectorAll(".navmenu-toggle").forEach((element) => {
@@ -80,7 +80,7 @@ import Clock from "./Clock.astro";
           <Link href="" external> Behance </Link>
           <Link href="" external>Resume</Link>
         </div>
-        <div class="flex w-full grow flex-col gap-4 justify-end mb-2">
+        <div class="flex w-full grow flex-col gap-4 justify-end">
           <div class="flex flex-nowrap space-x-2 text-zinc-500">
             <Clock />
             <p class="text-sm text-zinc-500">Malaysia</p>
