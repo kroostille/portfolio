@@ -3,6 +3,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { projects } from "../../lib/projects";
 import DefaultCard from "../../components/DefaultCard.astro";
 import Media from "../../components/Media.astro";
+import PaginationButton from "../../components/PaginationButton.astro";
 
 const project = projects.find((project) => project.id === "onix");
 ---
@@ -88,6 +89,10 @@ const project = projects.find((project) => project.id === "onix");
           <h2 class="text-sm font-medium">UI library</h2>
         </div>
       </div>
+    </div>
+    <div class="flex flex-row px-4 md:px-8 pb-6 border-b-2 border-dotted">
+      <PaginationButton href="ichiba" justify="start" label="Previous" page="Ichiba Market"></PaginationButton>
+      <PaginationButton href="shadow-wallet" justify="end" label="Next" page="Shadow Wallet"></PaginationButton>
     </div>
   </main>
 </ProjectLayout>

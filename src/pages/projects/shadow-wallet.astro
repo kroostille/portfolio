@@ -3,6 +3,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { projects } from "../../lib/projects";
 import DefaultCard from "../../components/DefaultCard.astro";
 import Media from "../../components/Media.astro";
+import PaginationButton from "../../components/PaginationButton.astro";
 
 const project = projects.find((project) => project.id === "shadow-wallet");
 ---
@@ -97,5 +98,9 @@ const project = projects.find((project) => project.id === "shadow-wallet");
       title="List NFTs on Shadow Exchange"
       showDescription={false}
     />
+  </div>
+  <div class="flex flex-row px-4 md:px-8 pb-6 border-b-2 border-dotted">
+    <PaginationButton href="onix" justify="start" label="Previous" page="Onix Wallet"></PaginationButton>
+    <PaginationButton href="shadow-exchange" justify="end" label="Next" page="Shadow Exchange"></PaginationButton>
   </div>
 </ProjectLayout>

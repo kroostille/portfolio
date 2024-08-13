@@ -2,6 +2,7 @@
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { projects } from "../../lib/projects";
 import DefaultCard from "../../components/DefaultCard.astro";
+import PaginationButton from "../../components/PaginationButton.astro";
 
 const project = projects.find((project) => project.id === "shadow-exchange");
 ---
@@ -57,6 +58,10 @@ const project = projects.find((project) => project.id === "shadow-exchange");
         title="Rebranding: from VIV3 to Shadow"
         showDescription={false}
       />
+    </div>
+    <div class="flex flex-row px-4 md:px-8 pb-6 border-b-2 border-dotted">
+      <PaginationButton href="shadow-wallet" justify="start" label="Previous" page="Shadow Wallet"></PaginationButton>
+      <PaginationButton href="ichiba" justify="end" label="Next" page="Ichiba Market"></PaginationButton>
     </div>
   </main>
 </ProjectLayout>
