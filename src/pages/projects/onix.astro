@@ -90,9 +90,19 @@ const project = projects.find((project) => project.id === "onix");
         </div>
       </div>
     </div>
-    <div class="flex flex-row px-4 md:px-8 pb-6 border-b-2 border-dotted">
-      <PaginationButton href="ichiba" justify="start" label="Previous" page="Ichiba Market"></PaginationButton>
-      <PaginationButton href="shadow-wallet" justify="end" label="Next" page="Shadow Wallet"></PaginationButton>
+    <div class="flex flex-row border-b-2 border-dotted px-4 pb-6 md:px-8">
+      <PaginationButton
+        href="ichiba"
+        justify="start"
+        label="Previous"
+        page="Ichiba Market"
+      />
+      <PaginationButton
+        href="shadow-wallet"
+        justify="end"
+        label="Next"
+        page="Shadow Wallet"
+      />
     </div>
   </main>
 </ProjectLayout>

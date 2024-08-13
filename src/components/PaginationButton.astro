@@ -8,17 +8,12 @@ interface Props {
 
 const props = Astro.props;
 
-const justifyClass =
-  props.justify === "start" ? "justif-start" : "justify-end";
+const justifyClass = props.justify === "start" ? "justif-start" : "justify-end";
 ---
 
-<a
-  href={props.href}
-  class=`flex w-full ${justifyClass}`>
-  <div class= `flex flex-col hover:text-zinc-600`>
+<a href={props.href} class=`flex w-full ${justifyClass}`>
+  <div class=`flex flex-col hover:text-zinc-600`>
     <p class=`flex text-sm ${justifyClass}`>{props.label}</p>
     <p class=`flex text-md font-medium ${justifyClass}`>{props.page}</p>
   </div>
 </a>
-
-

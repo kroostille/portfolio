@@ -99,8 +99,18 @@ const project = projects.find((project) => project.id === "shadow-wallet");
       showDescription={false}
     />
   </div>
-  <div class="flex flex-row px-4 md:px-8 pb-6 border-b-2 border-dotted">
-    <PaginationButton href="onix" justify="start" label="Previous" page="Onix Wallet"></PaginationButton>
-    <PaginationButton href="shadow-exchange" justify="end" label="Next" page="Shadow Exchange"></PaginationButton>
+  <div class="flex flex-row border-b-2 border-dotted px-4 pb-6 md:px-8">
+    <PaginationButton
+      href="onix"
+      justify="start"
+      label="Previous"
+      page="Onix Wallet"
+    />
+    <PaginationButton
+      href="shadow-exchange"
+      justify="end"
+      label="Next"
+      page="Shadow Exchange"
+    />
   </div>
 </ProjectLayout>
