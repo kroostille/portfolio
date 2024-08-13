@@ -4,7 +4,7 @@ import Media from "./Media.astro";
 interface Props {
   mediaType: "video" | "image";
   mediaSrc: string;
-  width: string;
+  style: string;
   justify: "start" | "end";
   title: string;
   showDescription: boolean;
@@ -24,7 +24,7 @@ const justifyClass =
   props.justify === "start" ? "justify-start" : "justify-end";
 ---
 
-<div class=`flex flex-col ${props.width}`>
+<div class=`flex flex-col ${props.style}`>
   <Media type={props.mediaType} src={props.mediaSrc} alt={props.title} />
   <div class=`flex ${justifyClass} pt-2`>
     <div class=`flex ${flowDirection} flex-row items-baseline`>
