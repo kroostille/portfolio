@@ -23,7 +23,7 @@ export const projects: Project[] = [
       "I have compared lots of crypto wallets last year and worked on designing one at my previous job. I wanted to design another one that will reflect the feelings I had when I was exploring the crypto ecosystem. I ended up with something darker and cyber.",
     team: [
       { role: "Designer", name: "Vaimiti DOCK" },
-      { role: "Developer", name: "Kenji LAU" },
+      { role: "Developer", name: "0xYami" },
     ],
     tools: "Figma, After Effects",
     link: "https://onix-7jbovx471-0xyami.vercel.app/index.html",
