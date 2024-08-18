@@ -72,7 +72,7 @@ export const projects: Project[] = [
     scope: "Product Design",
     year: "2022-2023",
     description:
-      "Shadow Wallet - old Flipper - is the first non-custodial wallet on Flow blockchain to store  web3 assets. I led this project for a year, from concept and ideation to product release, I was in charge of designing the product, planning, and ensuring the product quality and timely delivery. ",
+      "Shadow Wallet is the first non-custodial wallet on the Flow blockchain for storing web3 assets. I led this project for a year, from concept and ideation to product release. I was responsible for designing the product, establishing and maintaining the design system, planning, and ensuring product quality and timely delivery.",
     team: [
       { role: "Visual Identity", name: "Vaimiti DOCK" },
       { role: "Product Designer", name: "Vaimiti DOCK" },
