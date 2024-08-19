@@ -1,0 +1,88 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { projects } from "../../lib/projects";
+import DefaultCard from "../../components/DefaultCard.astro";
+import Media from "../../components/Media.astro";
+import PaginationButton from "../../components/PaginationButton.astro";
+
+const project = projects.find((project) => project.id === "filament");
+---
+
+<ProjectLayout project={project!}>
+  <main class="size-full">
+    <div class="flex px-4 pb-52 md:px-8">
+      <DefaultCard
+        mediaType="image"
+        mediaSrc="/assets/projects/filament/filament-orders.jpg"
+        style="w-full md:w-9/12"
+        justify="start"
+        title="Orders in Filament"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex justify-end px-4 pb-52 md:px-8">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/filament/filament-products.mp4"
+        style="w-full md:w-9/12"
+        justify="end"
+        title="Manage products"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex px-4 pb-52 md:px-8">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/filament/filament-categories.mp4"
+        style="w-full md:w-9/12"
+        justify="start"
+        title="Manage and create categories"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex justify-end px-4 pb-52 md:px-8">
+      <DefaultCard
+        mediaType="image"
+        mediaSrc="/assets/projects/filament/filament-payments.jpg"
+        style="w-full md:w-9/12"
+        justify="end"
+        title="View and manage payments"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex px-4 pb-52 md:px-8">
+      <DefaultCard
+        mediaType="image"
+        mediaSrc="/assets/projects/filament/filament-customers.jpg"
+        style="w-full md:w-9/12"
+        justify="start"
+        title="Manage and create new customers"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex justify-end px-4 pb-52 md:px-8">
+      <DefaultCard
+        mediaType="video"
+        mediaSrc="/assets/projects/filament/filament-storefront.mp4"
+        style="w-full md:w-9/12"
+        justify="end"
+        title="Deploy Filament storefront"
+        showDescription={false}
+      />
+    </div>
+    <div class="flex flex-row border-b-2 border-dotted px-4 pb-6 md:px-8">
+      <PaginationButton
+        href="ichiba"
+        justify="start"
+        label="Previous"
+        page="Ichiba Market"
+      />
+      <PaginationButton
+        href="onix"
+        justify="end"
+        label="Next"
+        page="Onix Wallet"
+      />
+    </div>
+  </main>
+</ProjectLayout>

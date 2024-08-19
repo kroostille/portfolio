@@ -85,4 +85,22 @@ export const projects: Project[] = [
     mediaSrc: "/assets/projects/shadow-wallet/shadow-wallet-intro.jpg",
     mediaAlt: "Shadow wallet extension",
   },
+  {
+    id: "filament",
+    name: "Filament platform",
+    scope: "Product Design",
+    year: "2024",
+    description:
+      "Filament is a commerce platform to create and deploy online stores in minutes with integrated crypto-currency payments.",
+    team: [
+      { role: "Product Designer", name: "Vaimiti DOCK" },
+      { role: "Developer", name: "Roushou" },
+    ],
+    tools: "Figma, Linear",
+    link: "https://filament.sh",
+    linkText: "Join the waitlist",
+    mediaType: "image",
+    mediaSrc: "/assets/projects/filament/filament-cover.jpg",
+    mediaAlt: "Filament plateform cover",
+  },
 ];
