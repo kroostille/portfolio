@@ -51,7 +51,7 @@ export const projects: Project[] = [
     id: "shadow-exchange",
     name: "Shadow NFT Exchange",
     scope: "Product Design",
-    year: "2021-2023",
+    year: "2021-2024",
     description:
       "Shadow Exchange - old VIV3 - is an NFT marketplace with expanded and live analytics on the Flow blockchain. I have spent 2 years working at Shadow as Product designer. Working at the stage of a start-up, I have had to cover various disciplines from branding, UX research and design to project planning and management.",
     team: [
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     id: "shadow-wallet",
     name: "Shadow Wallet Extension",
     scope: "Product Design",
-    year: "2022-2023",
+    year: "2022-2024",
     description:
       "Shadow Wallet is the first non-custodial wallet on the Flow blockchain for storing web3 assets. I led this project for a year, from concept and ideation to product release. I was responsible for designing the product, establishing and maintaining the design system, planning, and ensuring product quality and timely delivery.",
     team: [
