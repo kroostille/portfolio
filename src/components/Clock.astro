@@ -3,37 +3,34 @@ const formatTime = (date: Date): string =>
   date.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: true,
+    second: "2-digit",
+    hour12: false,
   });
 const initialTime = formatTime(new Date());
 ---
 
-<html>
-  <head>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        function updateTime() {
-          const timeElement = document.getElementById("real-time-clock");
-          if (timeElement) {
-            const now = new Date();
-            timeElement.textContent = now.toLocaleTimeString("en-US", {
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: true,
-            });
-          }
-        }
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    function updateTime() {
+      const timeElement = document.getElementById("real-time-clock");
+      if (timeElement) {
+        const now = new Date();
+        timeElement.textContent = now.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        });
+      }
+    }
 
-        // Update the clock every second
-        setInterval(updateTime, 1000);
-        // Set the initial time
-        updateTime();
-      });
-    </script>
-  </head>
-  <body>
-    <div id="real-time-clock" class="whitespace-nowrap text-sm">
-      {initialTime}
-    </div>
-  </body>
-</html>
+    // Update the clock every second
+    setInterval(updateTime, 1000);
+    // Set the initial time
+    updateTime();
+  });
+</script>
+
+<div id="real-time-clock" class="whitespace-nowrap text-sm">
+  {initialTime}
+</div>
