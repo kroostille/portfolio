@@ -20,7 +20,7 @@ export const projects: Project[] = [
     scope: "UI/UX Design",
     year: "2024",
     description:
-      "I have compared lots of crypto wallets last year and worked on designing one at my previous job. I wanted to design another one that will reflect the feelings I had when I was exploring the crypto ecosystem. I ended up with something darker and cyber.",
+      "I compared many crypto wallets last year and worked on designing one at my previous job. I wanted to create another wallet that reflects the feelings I experienced while exploring the crypto ecosystem. Ultimately, I ended up with a design that is darker and more cybernetic.",
     team: [
       { role: "Designer", name: "Vaimiti DOCK" },
       { role: "Developer", name: "0xYami" },
