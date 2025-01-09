@@ -4,7 +4,7 @@ export type Project = {
   scope: string;
   year: string;
   description: string;
-  team: { role: string; name: string }[];
+  team: { role: string; name: string; socialLink?: string }[];
   tools: string;
   link: string;
   linkText: string;
@@ -57,7 +57,11 @@ export const projects: Project[] = [
     team: [
       { role: "Visual Identity", name: "Vaimiti DOCK" },
       { role: "Product Designer", name: "Vaimiti DOCK" },
-      { role: "Animation", name: "Tasya ANGGITA RACHMANI" },
+      {
+        role: "Animation",
+        name: "Tasya ANGGITA RACHMANI",
+        socialLink: "https://www.instagram.com/tasgitasgit",
+      },
     ],
     tools: "Figma, Adobe Illustrator, AfterEffect, Rive, Linear, Notion",
     link: "https://x.com/shadow_sui",
@@ -76,7 +80,11 @@ export const projects: Project[] = [
     team: [
       { role: "Visual Identity", name: "Vaimiti DOCK" },
       { role: "Product Designer", name: "Vaimiti DOCK" },
-      { role: "Animation", name: "Tasya ANGGITA RACHMANI" },
+      {
+        role: "Animation",
+        name: "Tasya ANGGITA RACHMANI",
+        socialLink: "https://www.instagram.com/tasgitasgit",
+      },
     ],
     tools: "Figma, Adobe Illustrator, AfterEffect, Rive, Linear, Notion",
     link: "https://chromewebstore.google.com/detail/shadow-sui-wallet-extensi/bnkpbiknhjgaapiihlcjdohegaobiakd",
