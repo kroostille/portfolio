@@ -1,6 +1,6 @@
 ---
 import Link from "./Link.astro";
-import Clock from "./Clock.astro";
+import { Clock } from "./Clock.tsx";
 ---
 
 <script>
@@ -92,8 +92,8 @@ import Clock from "./Clock.astro";
       </div>
       <div class="flex w-full grow flex-col justify-end gap-4">
         <div class="flex flex-nowrap space-x-2 text-zinc-500">
-          <p class="text-sm text-zinc-500">BKK</p>
-          <Clock />
+          <p class="mr-2 text-sm text-zinc-500">BKK</p>
+          <Clock client:load />
         </div>
         <p
           class="flex w-full items-center whitespace-nowrap text-sm font-medium"
@@ -151,7 +151,7 @@ import Clock from "./Clock.astro";
   <div
     class="hidden space-x-2 text-zinc-500 lg:flex lg:flex-nowrap lg:justify-end"
   >
-    <p class="flex flex-none text-sm">BKK</p>
-    <Clock />
+    <p class="mr-2 flex flex-none text-sm">BKK</p>
+    <Clock client:load />
   </div>
 </nav>
