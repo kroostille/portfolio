@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DefaultCard from "../components/DefaultCard.astro";
+import Media from "../components/Media.astro";
 ---
 
 <BaseLayout title="Vaimiti DOCK | Playground">
@@ -52,6 +53,30 @@ import DefaultCard from "../components/DefaultCard.astro";
           title="Neon line • Figma"
           showDescription={false}
         />
+      </div>
+      <div class="flex flex-col">
+        <div
+          class="h-full content-start overflow-hidden rounded-lg border border-neutral-800"
+        >
+          <video playsinline autoplay loop muted class="h-full object-cover">
+            <source
+              src="/assets/experiments/arcade-room.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class=`flex justify-start pt-2`>
+          <div class=`flex flex-row pl-1 flex-row items-baseline`>
+            <img
+              src="/assets/arrow-turn-down-right.svg"
+              alt="Arrow down right icon"
+              class="stroke-2 pr-2"
+            />
+            <div class="flex flex-col">
+              <h2 class="text-sm font-medium">Interactive Arcade • Rive</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
