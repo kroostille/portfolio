@@ -21,62 +21,97 @@ import DefaultCard from "../components/DefaultCard.astro";
     {/* Section lab */}
 
     <div
-      class="grid grid-flow-row gap-12 pb-40 pt-32 sm:grid-cols-1 md:grid-cols-2 md:gap-4 lg:grid-cols-3 2xl:grid-cols-4"
+      class="columns-1 gap-4 px-2 pb-40 pt-32 sm:columns-2 md:columns-3 lg:columns-4"
     >
-      <div class="flex flex-col gap-6 md:pt-4">
-        <DefaultCard
-          mediaType="video"
-          mediaSrc="/assets/experiments/glitch-logo.mp4"
-          style="w-auto"
-          justify="start"
-          title="Glitch logo • After Effects"
-          showDescription={false}
-        />
-      </div>
-      <div class="flex flex-col gap-6 md:pt-4">
-        <DefaultCard
-          mediaType="video"
-          mediaSrc="/assets/experiments/figma-button.mp4"
-          style="w-auto"
-          justify="start"
-          title="Button pulse • Figma"
-          showDescription={false}
-        />
-      </div>
-      <div class="flex flex-col gap-6 md:pt-4">
+
+      <div class="mb-4 break-inside-avoid">
         <DefaultCard
           mediaType="video"
           mediaSrc="/assets/experiments/neon-line.mp4"
-          style="w-auto"
+          style="w-full"
           justify="start"
           title="Neon line • Figma"
           showDescription={false}
         />
       </div>
-      <div class="flex flex-col md:pt-4">
-        <div
-          class="h-full content-start overflow-hidden rounded-lg border border-neutral-800"
-        >
-          <video playsinline autoplay loop muted class="h-full object-cover aspect-square">
-            <source
-              src="/assets/experiments/arcade-room.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-        <div class=`flex justify-start pt-2`>
-          <div class=`flex flex-row pl-1 flex-row items-baseline`>
-            <img
-              src="/assets/arrow-turn-down-right.svg"
-              alt="Arrow down right icon"
-              class="stroke-2 pr-2"
-            />
-            <div class="flex flex-col">
-              <h2 class="text-sm font-medium">Interactive Arcade • Rive</h2>
-            </div>
-          </div>
-        </div>
+
+      <div class="mb-4 break-inside-avoid">
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/figma-button.mp4"
+          style="w-full"
+          justify="start"
+          title="Button pulse • Figma"
+          showDescription={false}
+        />
       </div>
+
+      <div class="mb-4 break-inside-avoid">
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/arcade-room.mp4"
+          style="w-full"
+          justify="start"
+          title="Interactive Arcade • Rive"
+          showDescription={false}
+        />
+      </div>
+
+      <div class="mb-4 break-inside-avoid">
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/bid-demo.mp4"
+          style="w-full"
+          justify="start"
+          title="Slide to Bid • LottieLab"
+          showDescription={false}
+        />
+      </div>
+
+      <div class="mb-4 break-inside-avoid">
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/glitch-logo.mp4"
+          style="w-full"
+          justify="start"
+          title="Glitch logo • After Effects"
+          showDescription={false}
+        />
+      </div>
+
+      <div class="mb-4 break-inside-avoid">
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/wheel.mp4"
+          style="w-full"
+          justify="start"
+          title="Wheel Offer • LottieLab"
+          showDescription={false}
+        />
+      </div>
+
+      <div class="mb-4 break-inside-avoid">
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/rewards-center.mp4"
+          style="w-full"
+          justify="start"
+          title="Rewards Center • LottieLab"
+          showDescription={false}
+        />
+      </div>
+
+      <div class="mb-4 break-inside-avoid">
+        <DefaultCard
+          mediaType="video"
+          mediaSrc="/assets/experiments/icons-shopping.mp4"
+          style="w-full"
+          justify="start"
+          title="Shopping Icons • LottieLab"
+          showDescription={false}
+        />
+      </div>
+
     </div>
   </main>
 </BaseLayout>

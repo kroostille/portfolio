@@ -7,7 +7,7 @@ export const Clock = () => {
       minute: "2-digit",
       second: "2-digit",
       hour12: false,
-      timeZone: "Asia/Ho_Chi_Minh",
+      timeZone: "Asia/Tokyo",
     });
 
   const [currentTime, setCurrentTime] = useState(formatTime(new Date()));
